@@ -1,5 +1,6 @@
+package Validator;
+
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -31,7 +32,7 @@ public class PolishIDCardValidator implements Validator{
     }
 
     private int[] lettersToInts(String letters){
-        Map<Character,Integer> lettersMap = new HashMap<>();
+        Map<Character,Integer> lettersMap;
         char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
         int[] ints = IntStream.rangeClosed(10,35).toArray();
         lettersMap = IntStream.rangeClosed(0,25).boxed()
